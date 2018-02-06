@@ -33,6 +33,7 @@ footer {
 	grid-row: last / span 1;
 }
 
+/*Header*/
 /*===========================================*/
 header {
 	background: #000;
@@ -45,6 +46,8 @@ h1 {
 	font-family: "Abel", sans-serif;
 	color: #fff;
 }
+
+/*Aside*/
 /*==========================================*/
 aside {
 	background: #ccc;
@@ -74,6 +77,8 @@ aside p {
 	font-family: "Lato", sans-serif;
 	line-height: 1.5em;
 }
+
+/*Main*/
 /*==========================================*/
 h2 {
 	font-size: 2em;
@@ -100,7 +105,76 @@ main p {
 	font-family: "Lato", sans-serif;
 	line-height: 1.5em;
 }
+
+/*Footer*/
 /*==========================================*/
 footer {
 	text-align: center;
+	font-family: "Lato", sans-serif;
+}
+
+/*Media Queries*/
+/*==========================================*/
+
+@media screen and (min-width: 1240px){
+	
+}
+@media screen and (min-width: 945px) and (max-width: 1240px){
+	
+}
+@media screen and (min-width: 760px) and (max-width: 945px){
+	body {
+		display: grid;
+		grid-template-columns: 25% 75%;
+		grid-template-rows: 50px auto auto 50px;
+	}
+	header{
+		grid-column: 1 / span 2;
+		grid-row: 1 / span 1;
+	}
+	aside {
+		min-height: 100vh;
+		grid-column: 1 / span 2;
+		grid-row: 4 / span 2;
+	}
+	main {
+		grid-column: 1 / span 2;
+		grid-row: 2 / span 1;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+	footer {
+		grid-column: 1 / span 2;
+		grid-row: 6 / span 1;
+		background: #ccc;
+	}
+}
+@media only screen and (max-width: 760px) {
+	body {
+		display: grid;
+		grid-template-columns: 25% 75%;
+		grid-template-rows: 50px auto auto 50px;
+	}
+	header{
+		grid-column: 1 / span 2;
+		grid-row: 1 / span 1;
+	}
+	aside {
+		min-height: 100vh;
+		grid-column: 1 / span 2;
+		grid-row: 4 / span 2;
+	}
+	main {
+		grid-column: 1 / span 2;
+		grid-row: 2 / span 1;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+	footer {
+		grid-column: 1 / span 2;
+		grid-row: 6 / span 1;
+		background: #ccc;
+	}
 }
